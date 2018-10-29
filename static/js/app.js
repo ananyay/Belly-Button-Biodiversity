@@ -51,7 +51,11 @@ function buildCharts(sample) {
         },
         text:data.otu_labels
       }]
-      Plotly.newPlot("bubble",bubbledata)
+      var layout = {
+        margin: {t :0},
+        showlegend: false
+      };
+      Plotly.newPlot("bubble",bubbledata,layout)
      }
      function errorHandle(error){
        console.log(`error is:`,error)
