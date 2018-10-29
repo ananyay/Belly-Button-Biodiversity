@@ -12,7 +12,7 @@ function buildMetadata(sample) {
       // Use `.html("") to clear any existing metadata
       metadata.html("")
       for( var key in result){
-        metadata.append("h5").text(key + ":" + result[key])
+        metadata.append("h6").text(key + ":" + result[key])
       }
     }
     function errorHandle(error){
@@ -38,7 +38,8 @@ function buildCharts(sample) {
         }]
        var layout = {
         height: 400,
-        width: 500
+        width: 500,
+        // showlegend:false
        } 
        Plotly.newPlot("pie",piedata,layout)
        var bubbledata =[{
